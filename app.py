@@ -13,7 +13,7 @@ from PIL import Image
 #app=Flask(__name__)
 #Swagger(app)
 
-pickle_in = open("fake-account-classifier.pkl","rb")
+pickle_in = open("fake-account-classifier.sav","rb")
 classifier=pickle.load(pickle_in)
 
 #@app.route('/')
