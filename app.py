@@ -76,6 +76,9 @@ def main():
     Average_Post_interval = st.text_input("Average_Post_interval","Type Here")
     result=""
     if st.button("Predict"):
+
+      with st.spinner(text='In progress'):
+        time.sleep(5)
         result=predict_note_authentication(Num_posts,Num_following,Num_followers,Biography_length,Picture_availability,Link_availability,Average_caption_length,Likes,Comments,Hashtag_count,Average_Post_interval)
         
     st.success('The output is {}'.format(result))
